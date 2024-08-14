@@ -53,7 +53,7 @@ class InspectionSerializer(serializers.ModelSerializer):
 
     def create(self, validated_data):
         # Extract individual steps for construction, assembly, and carton details
-        print(validated_data)
+       
         constructionSteps = {
             "constructionItemStep1": validated_data.pop('constructionItemStep1', ''),
             "constructionItemStep2": validated_data.pop('constructionItemStep2', ''),
@@ -112,5 +112,5 @@ class InspectionSerializer(serializers.ModelSerializer):
 
     def validate(self, data):
         # Print or log validated data for debugging
-        print("Data before validation:", data)
+      
         return super().validate(data)
